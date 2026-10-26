@@ -1,0 +1,136 @@
+{
+ "format": "couplet-plan/1",
+ "model_file": "mlp4_model.json",
+ "mode": "round",
+ "k": 64,
+ "s": 64,
+ "private_model": true,
+ "model_hash": "e43a29ca6270218c6e6da127fdc056c7ddbb1144f9dc5725144727d553257c86",
+ "manifest_hex": "43504c544d414e3140000000400000000001e43a29ca6270218c6e6da127fdc056c7ddbb1144f9dc5725144727d553257c86010000000400000074616e6808000000040000004cb454a87618f893b322af1003f8d6c0de43478589aad88588531a21d5112fcc0800000028000000696e70757473206f6620505f303a2066656174757265732c20776569676874732c20626961736573450000007b226164646572223a22726970706c65222c22636f756e74223a32342c226b223a36342c226b696e64223a22696e6d61736b222c226f776e6572223a302c2273223a36347d0100000017000000696e70757473206f6620505f313a206665617475726573440000007b226164646572223a22726970706c65222c22636f756e74223a322c226b223a36342c226b696e64223a22696e6d61736b222c226f776e6572223a312c2273223a36347d01000000180000006d617472697820747269706c65206f66206c617965722031450000007b226164646572223a22726970706c65222c22636f6c73223a342c226b223a36342c226b696e64223a226d6174747269706c65222c22726f7773223a322c2273223a36347d01000000180000006d617472697820747269706c65206f66206c617965722032450000007b226164646572223a22726970706c65222c22636f6c73223a322c226b223a36342c226b696e64223a226d6174747269706c65222c22726f7773223a322c2273223a36347d01000000180000006d617472697820747269706c65206f66206c617965722033450000007b226164646572223a22726970706c65222c22636f6c73223a322c226b223a36342c226b696e64223a226d6174747269706c65222c22726f7773223a322c2273223a36347d01000000100000007369746573206f66206c617965722031490000007b226164646572223a22726970706c65222c2266223a342c226b223a36342c226b696e64223a2273697465222c226d6f6465223a22726f756e64222c226e223a382c2273223a36347d02000000100000007369746573206f66206c617965722032490000007b226164646572223a22726970706c65222c2266223a342c226b223a36342c226b696e64223a2273697465222c226d6f6465223a22726f756e64222c226e223a382c2273223a36347d020000001a0000006f7574707574206d61736b73206f6620746865206c6f67697473310000007b226164646572223a22726970706c65222c226b223a36342c226b696e64223a226f75746d61736b222c2273223a36347d02000000",
+ "digest": "3fda73d1a32665670619cabfb8904670dd59715018d79bffafd77755ce127d7e",
+ "and_budget": 1266680,
+ "sites": 4,
+ "entries": [
+  {
+   "use": "inputs of P_0: features, weights, biases",
+   "name": "inmask_p0_c24_k64_s64",
+   "descriptor": {
+    "kind": "inmask",
+    "owner": 0,
+    "count": 24,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 301008
+  },
+  {
+   "use": "inputs of P_1: features",
+   "name": "inmask_p1_c2_k64_s64",
+   "descriptor": {
+    "kind": "inmask",
+    "owner": 1,
+    "count": 2,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 25084
+  },
+  {
+   "use": "matrix triple of layer 1",
+   "name": "mattriple_2x4_k64_s64",
+   "descriptor": {
+    "kind": "mattriple",
+    "rows": 2,
+    "cols": 4,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 305658
+  },
+  {
+   "use": "matrix triple of layer 2",
+   "name": "mattriple_2x2_k64_s64",
+   "descriptor": {
+    "kind": "mattriple",
+    "rows": 2,
+    "cols": 2,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 165368
+  },
+  {
+   "use": "matrix triple of layer 3",
+   "name": "mattriple_2x2_k64_s64",
+   "descriptor": {
+    "kind": "mattriple",
+    "rows": 2,
+    "cols": 2,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 165368
+  },
+  {
+   "use": "sites of layer 1",
+   "name": "site_n8_f4_k64_s64_round",
+   "descriptor": {
+    "kind": "site",
+    "n": 8,
+    "f": 4,
+    "k": 64,
+    "s": 64,
+    "mode": "round",
+    "adder": "ripple"
+   },
+   "batch": 2,
+   "n_and": 73969
+  },
+  {
+   "use": "sites of layer 2",
+   "name": "site_n8_f4_k64_s64_round",
+   "descriptor": {
+    "kind": "site",
+    "n": 8,
+    "f": 4,
+    "k": 64,
+    "s": 64,
+    "mode": "round",
+    "adder": "ripple"
+   },
+   "batch": 2,
+   "n_and": 73969
+  },
+  {
+   "use": "output masks of the logits",
+   "name": "gate_n1_k64_s64_shared_om1",
+   "descriptor": {
+    "kind": "outmask",
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 2,
+   "n_and": 4159
+  }
+ ],
+ "circuits": [
+  "gate_n1_k64_s64_shared_om1",
+  "inmask_p0_c24_k64_s64",
+  "inmask_p1_c2_k64_s64",
+  "mattriple_2x2_k64_s64",
+  "mattriple_2x4_k64_s64",
+  "setup_s64",
+  "site_n8_f4_k64_s64_round"
+ ]
+}

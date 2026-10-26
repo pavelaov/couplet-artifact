@@ -1,0 +1,34 @@
+# Build outputs of the native code (cpp/build_msvc.bat, cpp/build.sh)
+/cpp/build/
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+
+# Exported circuits: 3.6 GB of binary files, rebuilt bit for bit by  python python/bench/regen_circuits.py
+# from the manifest, which stays in the repository.
+# The small test circuits in cpp/tests/circuits/ are NOT ignored.
+/circuits/*
+!/circuits/manifest.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Scratch directories and logs of local runs
+/test_logs/
+/scratch/
+/tmp/
+/out/
+/.venv/
+/experiments/quick/
+*_scratch/
+*.tmp
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

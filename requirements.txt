@@ -1,0 +1,5 @@
+numpy==2.2.6; python_version < "3.12"
+matplotlib==3.10.9; python_version < "3.12"
+# Python 3.12 and newer: the versions of the recorded runs
+numpy==2.5.3; python_version >= "3.12"
+matplotlib==3.11.2; python_version >= "3.12"

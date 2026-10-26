@@ -1,0 +1,49 @@
+{
+ "format": "couplet-plan/1",
+ "model_file": "mlp64_model.json",
+ "mode": "exact",
+ "k": 64,
+ "s": 64,
+ "private_model": false,
+ "model_hash": "af841c2f5cba7841da0eaf0102188b39b3371c8c947a560654c85bc260b64643",
+ "manifest_hex": "43504c544d414e3140000000400000000100af841c2f5cba7841da0eaf0102188b39b3371c8c947a560654c85bc260b64643010000000400000074616e6810000000080000001f5272263f853491aabd7420b5f5a5cfd03344a4ee0c96918ef74b317921fb6002000000100000007369746573206f66206c6179657220314a0000007b226164646572223a22726970706c65222c2266223a382c226b223a36342c226b696e64223a2273697465222c226d6f6465223a226578616374222c226e223a31362c2273223a36347d20000000100000007369746573206f66206c6179657220324a0000007b226164646572223a22726970706c65222c2266223a382c226b223a36342c226b696e64223a2273697465222c226d6f6465223a226578616374222c226e223a31362c2273223a36347d20000000",
+ "digest": "53ebfd9f3519ddd7e4d7dbd76646148b63ee4b059aa73a2578d1d4e2fd35d775",
+ "and_budget": 13609344,
+ "sites": 64,
+ "entries": [
+  {
+   "use": "sites of layer 1",
+   "name": "site_n16_f8_k64_s64_exact",
+   "descriptor": {
+    "kind": "site",
+    "n": 16,
+    "f": 8,
+    "k": 64,
+    "s": 64,
+    "mode": "exact",
+    "adder": "ripple"
+   },
+   "batch": 32,
+   "n_and": 212646
+  },
+  {
+   "use": "sites of layer 2",
+   "name": "site_n16_f8_k64_s64_exact",
+   "descriptor": {
+    "kind": "site",
+    "n": 16,
+    "f": 8,
+    "k": 64,
+    "s": 64,
+    "mode": "exact",
+    "adder": "ripple"
+   },
+   "batch": 32,
+   "n_and": 212646
+  }
+ ],
+ "circuits": [
+  "setup_s64",
+  "site_n16_f8_k64_s64_exact"
+ ]
+}

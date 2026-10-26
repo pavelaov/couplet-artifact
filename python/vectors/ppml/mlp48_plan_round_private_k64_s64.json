@@ -1,0 +1,163 @@
+{
+ "format": "couplet-plan/1",
+ "model_file": "mlp48_model.json",
+ "mode": "round",
+ "k": 64,
+ "s": 64,
+ "private_model": true,
+ "model_hash": "4fd5c789d1bfcfe69b7ac97e4a5d24ee198b82f39c74ffb91bedac978e96c09f",
+ "manifest_hex": "43504c544d414e31400000004000000000014fd5c789d1bfcfe69b7ac97e4a5d24ee198b82f39c74ffb91bedac978e96c09f010000000400000074616e6810000000080000001f5272263f853491aabd7420b5f5a5cfd03344a4ee0c96918ef74b317921fb60090000003a000000696e70757473206f6620505f303a2066656174757265732c20776569676874732c206269617365732c203235362070657220696e7374616e6365460000007b226164646572223a22726970706c65222c22636f756e74223a3235362c226b223a36342c226b696e64223a22696e6d61736b222c226f776e6572223a302c2273223a36347d1f00000035000000696e70757473206f6620505f303a2066656174757265732c20776569676874732c206269617365732c20746865206c617374203334450000007b226164646572223a22726970706c65222c22636f756e74223a33342c226b223a36342c226b696e64223a22696e6d61736b222c226f776e6572223a302c2273223a36347d0100000024000000696e70757473206f6620505f313a2066656174757265732c20746865206c617374203234450000007b226164646572223a22726970706c65222c22636f756e74223a32342c226b223a36342c226b696e64223a22696e6d61736b222c226f776e6572223a312c2273223a36347d01000000370000006d617472697820747269706c652074696c6573206f66206c6179657220313a20363478343820696e2074696c6573206f66203136783136470000007b226164646572223a22726970706c65222c22636f6c73223a31362c226b223a36342c226b696e64223a226d6174747269706c65222c22726f7773223a31362c2273223a36347d0c000000370000006d617472697820747269706c652074696c6573206f66206c6179657220323a20363478363420696e2074696c6573206f66203136783136470000007b226164646572223a22726970706c65222c22636f6c73223a31362c226b223a36342c226b696e64223a226d6174747269706c65222c22726f7773223a31362c2273223a36347d10000000370000006d617472697820747269706c652074696c6573206f66206c6179657220333a20313078363420696e2074696c6573206f66203136783136470000007b226164646572223a22726970706c65222c22636f6c73223a31362c226b223a36342c226b696e64223a226d6174747269706c65222c22726f7773223a31302c2273223a36347d04000000100000007369746573206f66206c6179657220314a0000007b226164646572223a22726970706c65222c2266223a382c226b223a36342c226b696e64223a2273697465222c226d6f6465223a22726f756e64222c226e223a31362c2273223a36347d40000000100000007369746573206f66206c6179657220324a0000007b226164646572223a22726970706c65222c2266223a382c226b223a36342c226b696e64223a2273697465222c226d6f6465223a22726f756e64222c226e223a31362c2273223a36347d400000001a0000006f7574707574206d61736b73206f6620746865206c6f67697473310000007b226164646572223a22726970706c65222c226b223a36342c226b696e64223a226f75746d61736b222c2273223a36347d0a000000",
+ "digest": "505d282b4c510984e3125a62d4b9d1cabfbba55e8a28c97f5dd3d50c4d81f47e",
+ "and_budget": 355126162,
+ "sites": 128,
+ "entries": [
+  {
+   "use": "inputs of P_0: features, weights, biases, 256 per instance",
+   "name": "inmask_p0_c256_k64_s64",
+   "descriptor": {
+    "kind": "inmask",
+    "owner": 0,
+    "count": 256,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 31,
+   "n_and": 3210752
+  },
+  {
+   "use": "inputs of P_0: features, weights, biases, the last 34",
+   "name": "inmask_p0_c34_k64_s64",
+   "descriptor": {
+    "kind": "inmask",
+    "owner": 0,
+    "count": 34,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 426428
+  },
+  {
+   "use": "inputs of P_1: features, the last 24",
+   "name": "inmask_p1_c24_k64_s64",
+   "descriptor": {
+    "kind": "inmask",
+    "owner": 1,
+    "count": 24,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 1,
+   "n_and": 301008
+  },
+  {
+   "use": "matrix triple tiles of layer 1: 64x48 in tiles of 16x16",
+   "name": "mattriple_16x16_k64_s64",
+   "descriptor": {
+    "kind": "mattriple",
+    "rows": 16,
+    "cols": 16,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 12,
+   "n_and": 7774336
+  },
+  {
+   "use": "matrix triple tiles of layer 2: 64x64 in tiles of 16x16",
+   "name": "mattriple_16x16_k64_s64",
+   "descriptor": {
+    "kind": "mattriple",
+    "rows": 16,
+    "cols": 16,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 16,
+   "n_and": 7774336
+  },
+  {
+   "use": "matrix triple tiles of layer 3: 10x64 in tiles of 16x16",
+   "name": "mattriple_10x16_k64_s64",
+   "descriptor": {
+    "kind": "mattriple",
+    "rows": 10,
+    "cols": 16,
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 4,
+   "n_and": 4934212
+  },
+  {
+   "use": "sites of layer 1",
+   "name": "site_n16_f8_k64_s64_round",
+   "descriptor": {
+    "kind": "site",
+    "n": 16,
+    "f": 8,
+    "k": 64,
+    "s": 64,
+    "mode": "round",
+    "adder": "ripple"
+   },
+   "batch": 64,
+   "n_and": 135981
+  },
+  {
+   "use": "sites of layer 2",
+   "name": "site_n16_f8_k64_s64_round",
+   "descriptor": {
+    "kind": "site",
+    "n": 16,
+    "f": 8,
+    "k": 64,
+    "s": 64,
+    "mode": "round",
+    "adder": "ripple"
+   },
+   "batch": 64,
+   "n_and": 135981
+  },
+  {
+   "use": "output masks of the logits",
+   "name": "gate_n1_k64_s64_shared_om1",
+   "descriptor": {
+    "kind": "outmask",
+    "k": 64,
+    "s": 64,
+    "adder": "ripple"
+   },
+   "batch": 10,
+   "n_and": 4159
+  }
+ ],
+ "circuits": [
+  "gate_n1_k64_s64_shared_om1",
+  "inmask_p0_c256_k64_s64",
+  "inmask_p0_c34_k64_s64",
+  "inmask_p1_c24_k64_s64",
+  "mattriple_10x16_k64_s64",
+  "mattriple_16x16_k64_s64",
+  "setup_s64",
+  "site_n16_f8_k64_s64_round"
+ ],
+ "tiling": {
+  "rows": 16,
+  "cols": 16,
+  "limit": 4096,
+  "tiled": true,
+  "tiles": 32,
+  "tiles_per_layer": [
+   12,
+   16,
+   4
+  ]
+ }
+}
